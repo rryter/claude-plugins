@@ -1,0 +1,8 @@
+{
+  "name": "angular",
+  "description": "A plugin to support generation of good looking and well designed api components",
+  "version": "0.0.1",
+  "author": {
+    "name": "Reto Ryter"
+  }
+}

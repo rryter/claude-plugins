@@ -1,0 +1,8 @@
+{
+  "name": "ui-design",
+  "description": "A plugin to support generation of good looking UI designs",
+  "version": "0.0.1",
+  "author": {
+    "name": "Reto Ryter"
+  }
+}
