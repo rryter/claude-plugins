@@ -9,9 +9,14 @@
       "source": "./angular",
       "description": "Plugin under development"
     },
-     {
+    {
       "name": "ui-design",
       "source": "./ui-design",
+      "description": "Plugin under development"
+    },
+    {
+      "name": "consulting",
+      "source": "./consulting",
       "description": "Plugin under development"
     }
   ]
