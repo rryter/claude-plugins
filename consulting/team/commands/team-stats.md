@@ -1,4 +1,5 @@
 ---
+name: cons:team-stats
 description: Generate condensed team contributor statistics report comparing two years
 ---
 
