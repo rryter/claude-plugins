@@ -10,7 +10,7 @@ You are tasked with generating a concise, actionable team contributor statistics
 Run the script to find the top 10 contributors by PR count for the current year:
 
 ```bash
-bash .claude/scripts/find-top-contributors.sh 2025 10
+bash ${CLAUDE_PLUGIN_ROOT}/scripts/find-top-contributors.sh 2025 10
 ```
 
 Parse the output which will be in format: `github_username:pr_count`
@@ -64,7 +64,7 @@ rfe-css|raphael|felber|p17875|raphael.felber@css.ch
 Run the PR metrics script with the GitHub usernames (comma-separated):
 
 ```bash
-bash .claude/scripts/gather-contributor-metrics.sh "user1,user2,user3" 2024 2025
+bash ${CLAUDE_PLUGIN_ROOT}/scripts/gather-contributor-metrics.sh "user1,user2,user3" 2024 2025
 ```
 
 This will output JSON with PR counts and **monthly breakdowns for both years** (2024 and 2025). Save the output location.
@@ -74,7 +74,7 @@ This will output JSON with PR counts and **monthly breakdowns for both years** (
 Run the git metrics script with the identities file:
 
 ```bash
-bash .claude/scripts/gather-git-metrics.sh /tmp/contributor-identities.txt 2024 2025
+bash ${CLAUDE_PLUGIN_ROOT}/scripts/gather-git-metrics.sh /tmp/contributor-identities.txt 2024 2025
 ```
 
 This will output JSON with commit counts and **monthly breakdowns for both years** (2024 and 2025).
@@ -191,7 +191,7 @@ Save the report to `/tmp/team-stats-report.md` using the Write tool.
 Generate the final interactive HTML dashboard that includes the report and charts:
 
 ```bash
-bash .claude/scripts/generate-interactive-charts.sh /tmp/contributor-metrics-*.json /tmp/git-metrics-*.json /tmp/team-stats-graphs /tmp/team-stats-report.md
+bash ${CLAUDE_PLUGIN_ROOT}/scripts/generate-interactive-charts.sh /tmp/contributor-metrics-*.json /tmp/git-metrics-*.json /tmp/team-stats-graphs /tmp/team-stats-report.md
 ```
 
 This will create an interactive HTML file at `/tmp/team-stats-graphs/team-stats-charts.html` with:
@@ -214,22 +214,22 @@ After generating the dashboard, inform the user they can open the HTML file in t
 
 ```bash
 # Step 1: Find top contributors
-bash .claude/scripts/find-top-contributors.sh 2025 10
+bash ${CLAUDE_PLUGIN_ROOT}/scripts/find-top-contributors.sh 2025 10
 
 # Step 2: You'll search for identities manually using git log and grep
 
 # Step 3: Gather PR metrics
-bash .claude/scripts/gather-contributor-metrics.sh "rryter,rfe-css,tthttl,zemph,vorderpneu" 2024 2025
+bash ${CLAUDE_PLUGIN_ROOT}/scripts/gather-contributor-metrics.sh "rryter,rfe-css,tthttl,zemph,vorderpneu" 2024 2025
 
 # Step 4: Gather git metrics (after creating identities file)
-bash .claude/scripts/gather-git-metrics.sh /tmp/contributor-identities.txt 2024 2025
+bash ${CLAUDE_PLUGIN_ROOT}/scripts/gather-git-metrics.sh /tmp/contributor-identities.txt 2024 2025
 
 # Step 5: Analyze and merge data
 
 # Step 6: Generate report (save to /tmp/team-stats-report.md)
 
 # Step 7: Generate interactive dashboard with embedded report
-bash .claude/scripts/generate-interactive-charts.sh /tmp/contributor-metrics-*.json /tmp/git-metrics-*.json /tmp/team-stats-graphs /tmp/team-stats-report.md
+bash ${CLAUDE_PLUGIN_ROOT}/scripts/generate-interactive-charts.sh /tmp/contributor-metrics-*.json /tmp/git-metrics-*.json /tmp/team-stats-graphs /tmp/team-stats-report.md
 ```
 
 Begin the analysis now. Start with Step 1.
