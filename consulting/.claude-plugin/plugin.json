@@ -1,0 +1,8 @@
+{
+  "name": "fe-consulting",
+  "description": "A plugin to support myself (Reto Ryter) in frontend and team related consulting tasks.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Reto Ryter"
+  }
+}
